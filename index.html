@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+
+
+</head>
+<body>
+<header class="titulo">
+  <h1>Desserts</h1> 
+</header>
+
+<section id="menus" class="menus">
+</section>
+
+<section id="addCart" class="addCart">
+  <article class="carrito">
+    <h2>Your Cart(<span class="countProd">0</span>)</h2>
+    <div class="datostabla">     
+    </div>
+  </article>
+</section>
+
+<section id="confir_order" class="confir_order">
+
+    <div>
+      <img src="assets/images/icon-order-confirmed.svg" alt="">
+        <h2>Order Confirmed</h2>
+        <p class="subtitle">We hope you enjoy your food!</p>
+        <div class="tabla_confirm">
+
+        </div>
+          <button class="newOrder">Star New Order</button>
+    </div>
+  
+</section>
+
+
+
+  <!-- <div class="attribution"> -->
+    <!-- Your Cart (Quantity) -->
+    <!-- Your added items will appear here
+    Challenge by <a href="#">0</a>. 
+    Coded by <a href="#">Leonardo Castellar Stave</a>. -->
+  <!-- </div> -->
+
+  <template id="tableCarrito">
+    <table>
+     <body>
+     <tr>
+      <td rowspan="2"></td>
+     </tr>
+     </body>
+      
+    </table>
+
+
+  </template>
+
+  <template id="producto-menu">
+
+    <article class="cart">
+
+      <div class="imgDiv">
+
+        <img class="imgProd">
+
+        <div id="btnAdd" class="btnAdd activo" data-esc>
+          <img src="assets/images/icon-add-to-cart.svg" alt="">
+          <p>Add to Cart</p>
+        </div>
+
+
+        <div id="btnCount" class="btnCount">
+          <button class="restar">-
+          </button>
+          <p id="contar">0</p>
+          <button >
+            <img class="sumar" src="assets/images/icon-increment-quantity.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+     <figcaption></figcaption>
+    </article>
+
+  </template>
+
+  
+
+  <script src="index.js"></script>
+</body>
+</html>

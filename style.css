@@ -1,0 +1,447 @@
+:root {
+    
+--Red: hsl(14, 86%, 42%);
+--Red_alfa: hsl(14, 70%, 34%);
+--Green: hsl(159, 69%, 38%);
+
+--Rose_50: hsl(20, 50%, 98%);
+--Rose_100: hsl(13, 31%, 94%);
+--Rose_300: hsl(14, 25%, 72%);
+--Rose_400: hsl(7, 20%, 60%);
+--Rose_500: hsl(12, 20%, 44%);
+--Rose_900: hsl(14, 65%, 9%);
+}
+html{
+    box-sizing: border-box;
+    
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+   font-family: "Red Hat Text", sans-serif;
+   background-color: var(--Rose_50);
+   padding: 2rem;
+   display: grid;
+   grid-template-rows: 3% 1fr 2%;
+   grid-template-columns: 1fr 25%;
+   grid-template-areas: 
+   "titulo  addCart"
+   "menus   addCart"
+   "attribution attribution"
+   ;
+   
+   
+}
+.titulo{
+    grid-area: titulo;
+    padding-left: 1rem;
+    height: auto;
+    
+ 
+}
+h1{
+    margin: 0;
+    color: var(--Rose_900);
+}
+.imgProd{
+    max-width: 100%;
+    height: auto;
+    border-radius: .8rem;
+    /* border: 2px solid  var(--Red); */
+}
+.imgDiv{
+    height: auto;
+    position: relative;
+}
+.activo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.no_activo{
+    display: none;
+}
+.btnAdd{
+    background-color: white;
+    padding: .4rem 1rem;
+    font-weight: bold;
+    gap: .2rem;
+    width: 70%;
+    border-radius: 4rem;
+    border: thin solid var(--Rose_500);
+    color: var(--Rose_900);
+    position: absolute;
+    bottom: -1rem;
+    left: 15%;
+    cursor: pointer;
+    z-index: 2;
+    
+}
+.btnAdd p{
+    margin: 1px;
+    
+}
+
+.btnAdd:hover{
+    color: var(--Red);
+    border: thin solid var(--Red);
+}
+
+.btnCount{
+   
+    padding: .4rem 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    border-radius: 4rem;
+    border: thin solid var(--Red);
+    color: var(--Rose_50);
+    position: absolute;
+    bottom: -1rem;
+    left: 15%;
+    background-color: var(--Red);
+    z-index: 1;
+}
+.btnCount p{
+    margin: 1px;
+}
+.btnCount button{
+    cursor: pointer;
+    background-color: var(--Red);
+    border: thin solid var(--Rose_50);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: grid;
+    place-content: center;
+    color: var(--Rose_50);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+   
+}
+.addCart{
+    grid-area: addCart;
+}
+.categoria{
+    color: var(--Rose_300);
+    /* font-size: 13px; */
+}
+.nombre{
+    color: var(--Rose_900);
+    font-weight: bold;
+    /* font-size: 14px; */
+}
+.precio{
+    color: var(--Red);
+    font-weight: bold;
+    /* font-size: 16px; */
+}
+.menus {
+    padding: 1rem;
+    /* max-width: 90%; */
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-area: menus;
+   
+}
+.cart{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+     margin-top: 1.5rem;
+
+    
+}
+
+.carrito{
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    padding: .8rem;
+}
+
+ .datostabla img {
+    width: 50%;
+    margin: auto;
+ }
+ .datostabla{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+ }
+ .datostabla tbody{
+    border-bottom: 1px solid black;
+   
+    
+ }
+.tableCarrito{
+    width: 100%;
+    
+}
+ .cerrar{
+    width: 20%;
+    /* border: 1px solid; */
+    padding-left: 8%;
+
+ }
+ .cerrar div:hover{
+   
+    border: 1.8px solid var(--Rose_900);
+ }
+ .cerrar div{
+    cursor: pointer;
+    border: 1.8px solid var(--Rose_300);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    font-weight: bold;
+   
+ }
+.letrascarrito {
+    text-align: center;
+    font-weight: bold;
+    color: var(--Rose_400);
+    font-size: 13px;
+    
+}
+.nombreProd {
+    font-weight: bold;
+    color: var(--Rose_900);
+    width: 80%;
+}
+.cantProd{
+    color: var(--Red);
+    font-weight: bold;
+    padding-right: 10px;
+}
+.precioProd{
+    color: var(--Rose_400);
+    padding-right: 5px;
+}
+.subProd{
+    color: var(--Rose_500);
+    font-weight: bolder;
+    text-align: center;
+}
+.delivery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--Rose_50);
+    padding: 1rem .5rem ;
+    border-radius: .6rem;
+}
+.delivery img{
+ width: 20px;
+ height: 20px;
+ margin: 0;
+}
+.OrderTotal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.OrderTotal p{
+    display: inline;
+    /* width: 60%; */
+}
+.precioOrder{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.confirOrder{
+    background-color: var(--Red);
+    border: none;
+    color: var(--Rose_100);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin:  1rem 0rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.confirOrder:hover{
+    background-color: var(--Red_alfa);
+}
+h2{
+    margin-bottom: 1rem;
+    color: var(--Red);
+}
+
+figcaption{
+    margin-top: 2rem;
+}
+
+.confir_order{
+
+    position: fixed;
+    background-color: rgba(0, 0, 0, 50%);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+
+}
+
+.confir_order > div{
+    width: 40vw;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 1rem;
+   
+}
+.confir_order h2{
+    color: var(--Rose_900);
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+.subtitle {
+    margin: 0;
+    color: var(--Rose_500);
+    
+}
+
+
+
+
+.imgconfirm{
+    width: 4rem;
+    border-radius: .5rem;
+    margin: 0;
+    margin-right: .7rem;
+}
+.tabla_confirm{
+    padding: 1rem;
+    height: 40vh;
+    background-color:  var(--Rose_100);
+    border-radius: .5rem;
+    margin-top: 1rem;
+    overflow: auto;
+}
+.tabla_confirm > table{
+    width: 100%;
+}
+.tdImg{
+    width: 10%;
+}
+
+.nomConfirm{
+    font-weight: bold;
+    color: var(--Rose_900);
+    width: 70%;
+ 
+}
+.precioconfirm{
+    color: var(--Rose_500);
+    font-weight: bolder;
+    text-align: center;
+    width: 30%;
+}
+.subconfirm{
+    font-weight: bold;
+    color: var(--Rose_900);
+    padding-left: 2rem;
+}
+.newOrder{
+    background-color: var(--Red);
+    border: none;
+    color: var(--Rose_100);
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin:  1rem 0rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    grid-area: attribution;
+    /* background-color: aqua; */
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (500px >= width){
+
+body {
+    display: grid;
+    grid-template-rows: 10vh 1fr 2% 10vh;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "titulo"
+    "menus "
+    "addCart"
+    "attribution"
+    ;
+    
+}
+.titulo{
+    grid-area: titulo;
+
+}
+.menus {
+    grid-area: menus;
+   
+}
+.addCart{
+    grid-area: addCart;
+}
+
+.confir_order > div{
+    width: 100vw;
+   
+}
+
+.attribution { 
+    background-color: red;
+    grid-area: attribution;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
